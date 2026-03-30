@@ -144,6 +144,10 @@ rm -rf /tmp/skill-optimizer
 - OpenCode
 - Gemini CLI
 
+## 社区
+
+- [LINUX DO](https://linux.do) — 本项目首发社区
+
 ## 许可证
 
 MIT

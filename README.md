@@ -144,6 +144,10 @@ Works with any agent that supports the [Agent Skills](https://agentskills.io) op
 - OpenCode
 - Gemini CLI
 
+## Community
+
+- [LINUX DO](https://linux.do) — Where we first shared this project
+
 ## License
 
 MIT
